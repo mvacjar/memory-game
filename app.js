@@ -82,7 +82,7 @@ const cardArray = [
   },
 ];
 
-// Order randomly
+// Disorder Cards Randomly
 cardArray.sort(() => 0.5 - Math.random());
 
 // Variables
@@ -152,3 +152,14 @@ function flipCard() {
 }
 
 createBoard();
+
+function swishToBlack() {
+  let body = document.querySelector("body");
+  body.classList.toggle("dark-mode");
+
+  let swish = document.querySelector("#button");
+  swish.classList.toggle("dark-mode-button");
+}
+
+let button = document.querySelector("#button");
+button.addEventListener("click", swishToBlack);
