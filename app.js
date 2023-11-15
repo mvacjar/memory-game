@@ -147,12 +147,13 @@ function flipCard() {
   cardsChosenId.push(cardId);
   this.setAttribute("src", cardArray[cardId].img);
   if (cardsChosen.length === 2) {
-    setTimeout(checkForMatch, 300);
+    setTimeout(checkForMatch, 500);
   }
 }
 
 createBoard();
 
+// Display to black mode
 function swishToBlack() {
   let body = document.querySelector("body");
   body.classList.toggle("dark-mode");
